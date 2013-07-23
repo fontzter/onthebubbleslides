@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>reveal.js - The HTML Presentation Framework</title>
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<section>
+						<h1>.<font color="#ff9900">on</font>(".theBubble")</h1>
+						<div>Event Handling at a Higher Level</div>
+						<div>
+							<br>
+						</div>
+						<div>Dave Fontz</div>
+						<div>
+							<br>
+						</div>
+						<div>
+							<br>
+						</div>
+						<div class="absolute-element" style="position: absolute; width: 134px; height: 165px; z-index: 4; left: 186px; top: 406px;">
+							<img src="http://bohconf.com/img/logo.png" style="width: 94.0362114906311px; height: 126.40292885034329px; max-height: none; max-width: none;">
+							<br>
+						</div>
+						<div>BOFCONF</div>
+						<div>Baltimore, MD</div>
+						<div>July 2013</div>
+					</section>
+					<section>
+						<h2>Quick overview</h2>
+						<div>
+							<br>
+						</div>
+						<div>
+							<br>
+						</div>
+						<div>
+							<ul>
+								<li>jQuery Event Binding</li>
+								<li>Beginner/Intermediate Level</li>
+								<li>on() Event -- Best Practices</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h2>ABOUT ME</h2>
+					<div>
+						<div style="font-size: 35.97957229614258px; font-style: normal; font-variant: normal;">
+							<br>
+						</div>
+						<h3 style="font-style: normal; font-variant: normal;">DAVE FONTZ</h3>
+						<div style="font-size: 35.97957229614258px; font-style: normal; font-variant: normal;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davefontz/images/51081/dbdworksLongTagT.png" style="max-width: none; max-height: none; width: 486.5816020965576px; height: 107.34651076223182px;">
+							<br>
+						</div>
+						<div style="font-size: 35.97957229614258px; font-style: normal; font-variant: normal;">dfontz@dbdworks.com</div>
+						<div style="font-size: 35.97957229614258px; font-style: normal; font-variant: normal;">@fontzter</div>
+					</div>
+				</section>
+				<section>
+					<section>&nbsp;<br>
+						<div class="absolute-element" style="position: absolute; width: 302px; height: 300px; z-index: 4; left: 500px; top: 225px;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davefontz/images/53234/jquery.png">
+							<br>
+						</div>
+						<h1 class="absolute-element" style="position: absolute; width: 670px; height: 116px; z-index: 4; left: 155px; top: 79px; max-height: none; max-width: none;">EVENT BINDING</h1>
+						<div class="absolute-element" style="position: absolute; width: 660px; height: 353px; z-index: 4; left: -13px; top: 85px; max-height: none; max-width: none;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davefontz/images/53231/handcuffs.png" style="width: 391.2523617744446px; height: 213.432537554094px; max-height: none; max-width: none;">
+							<br>
+						</div>
+					</section>
+					<section>
+						<h2 style="max-height: none; max-width: none;">In a Bind</h2>
+						<div>
+							<br>
+						</div>
+						<div class="absolute-element" style="position: absolute; width: 479px; height: 137px; z-index: 4; left: 364px; top: 194px;">
+							<ul style="font-size: 35.8555908203125px; font-style: normal; font-variant: normal;">
+								<li>
+									<span>$("</span>
+									<font color="#ffff00" style="font-family: inherit; font-style: inherit; font-variant: inherit;">.clickme</font>
+									<span>").click(</span>
+									<font color="#ffff00" style="font-family: inherit; font-style: inherit; font-variant: inherit;">myFunc</font>
+									<span>);</span>
+									<br>
+								</li>
+							</ul>
+							<div style="font-size: 35.8555908203125px; font-style: normal; font-variant: normal;">can also be written as:</div>
+						</div>
+						<h2 style="max-height: none; max-width: none; width: 335px; height: 262px; position: absolute; z-index: 5; left: -6px; top: 15px;" class="absolute-element">
+						<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davefontz/images/51122/Confusion.gif" style="font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: normal; text-align: center; color: rgb(238, 238, 238);">
+						</h2>
+						<div class="absolute-element" style="position: absolute; width: 382px; height: 60px; z-index: 4; left: 364px; top: 122px; max-height: none; max-width: none;">(so many ways to click!)</div>
+						<div class="absolute-element" style="position: absolute; width: 830px; height: 412px; z-index: 6; left: 75px; top: 239px;">
+							<div>
+								<br>
+							</div>
+							<div>
+								<span>
+								<font style="font-size: 32px;">
+								<br>
+								</font>
+								</span>
+							</div>
+							<ul>
+								<font style="font-size: 32px;">
+								<li class="fragment" data-fragment-index="0">$(".clickme").<font color="#ff9900">one</font>("click", myFunc);</li>
+								<li class="fragment" data-fragment-index="1">$(".clickme").<font color="#ff9900">bind</font>("click", myFunc);</li>
+								<li style="box-sizing: border-box; margin: 0px; padding: 0px; border: 0px; font-family: inherit; font-style: inherit; font-variant: inherit; font-weight: inherit; vertical-align: baseline;" class="fragment" data-fragment-index="2">$(".clickme").<font color="#ff9900" style="box-sizing: border-box;">on</font>("click", myFunc);</li>
+								<li class="fragment" data-fragment-index="3">$(".clickme").<font color="#ff9900">live</font>("click", myFunc);</li>
+								<li class="fragment" data-fragment-index="4">$(".parent").<font color="#ff9900">delegate</font>(".clickme", "click", myFunc);</li>
+								<li class="fragment" data-fragment-index="5">
+									<span style="background-color: rgb(0, 0, 0);">$(".parent").<font color="#ff9900">on</font>("click", ".clickme", myFunc);</span>
+								</li>
+								</font>
+							</ul>
+						</div>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Nesting the the Dom Tree</h2>
+						<div>
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davefontz/images/51162/dom-tree.png" style="width: 400.16753853179665px; height: 467.5816020965576px; max-height: none; max-width: none;">
+							<br>
+						</div>
+					</section>
+					<section>
+						<h2>HierarchY - Code Example</h2>
+						<div>
+							<a href="file://localhost/Users/dfontz/onthebubble/allin.html">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davefontz/images/51792/CapturFiles-201307197_1707.png" style="width: 688.4823108245668px; height: 476.5816020965576px; max-height: none; max-width: none;">
+							</a>
+							<br>
+						</div>
+					</section>
+				</section>
+				<section>
+					<h2>THank you!</h2>
+					<div>
+						<h3 style="font-style: normal; font-variant: normal;">
+						<br>
+						</h3>
+						<h3 style="font-style: normal; font-variant: normal;">DAVE FONTZ</h3>
+						<div style="font-size: 35.97957229614258px; font-style: normal; font-variant: normal;">
+							<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/davefontz/images/51081/dbdworksLongTagT.png" style="max-width: none; max-height: none; width: 486.5816020965576px; height: 107.34651076223182px;">
+							<br>
+						</div>
+						<div style="font-size: 35.97957229614258px; font-style: normal; font-variant: normal;">dfontz@dbdworks.com</div>
+						<div style="font-size: 35.97957229614258px; font-style: normal; font-variant: normal;">@fontzter</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+		<script>
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+		</script>
+	</body>
+</html>
